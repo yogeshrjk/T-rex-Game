@@ -46,7 +46,7 @@ window.addEventListener("keydown", (start) => {
         interval = setInterval(scoreCounter, 200);
 
         //custom obstacle
-        if (obstacle.classList == "obstacleActive") {
+        if (gameOver.style.display != "block") {
             let nextObstacle = function () {
                 let randomNum = Math.floor(Math.random() * obstacleArray.length);
                 let custom = obstacleArray[randomNum];
@@ -94,6 +94,7 @@ let result = setInterval(() => {
         die.play();
         gameOver.style.display = "block";
         restart.style.display = "block";
+
         obstacle.classList.remove("obstacleActive");
         cloud.classList.remove("cloudActive");
         cloud2.classList.remove("cloudActive");
@@ -105,3 +106,15 @@ let result = setInterval(() => {
     }
 
 }, 10);
+
+
+window.addEventListener("keydown", (e) => {
+    if (e.key == "m") {
+        jump.muted = true;
+        die.muted = true;
+    }
+    else if (e.key == "s") {
+        jump.muted = false;
+        die.muted = false;
+    }
+});

@@ -200,7 +200,7 @@ body {
 #instruction {
   left: calc(20%);
   right: calc(20%);
-  top: calc(80%);
+  bottom: calc(90%);
   position: absolute;
   font-size: small;
   color: #535353;
