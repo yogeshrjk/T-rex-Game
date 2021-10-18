@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+#game {
+  height: 400px;
+  width: 800px;
+  position: relative;
+  overflow: hidden;
+  /* border: 2px solid yellow; */
+}
+
+/***************************dino****************************/
+#game #dino {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  bottom: 25px;
+  left: 100px;
+  background-image: url("../images/trex1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: dinoMove 1s infinite;
+}
+.dinoActive {
+  animation: animateDino 0.8s linear infinite !important ;
+}
+
+@keyframes dinoMove {
+  0% {
+    background-image: url("../images/trex3.png");
+  }
+  20% {
+    background-image: url("../images/trex4.png");
+  }
+  40% {
+    background-image: url("../images/trex3.png");
+  }
+  60% {
+    background-image: url("../images/trex4.png");
+  }
+  80% {
+    background-image: url("../images/trex3.png");
+  }
+  100% {
+    background-image: url("../images/trex4.png");
+  }
+}
+
+@keyframes animateDino {
+  0%,
+  100% {
+    bottom: 28px;
+  }
+
+  45%,
+  55% {
+    bottom: 150px;
+  }
+}
+
+/***************************obstacle****************************/
+
+#game #obstacle {
+  max-width: 70px;
+  max-height: 50px;
+  position: absolute;
+  bottom: 25px;
+  right: -50px;
+  /* background-image: url("../images/obstacle1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+.obstacleActive {
+  animation: animateObstacle 2s linear infinite;
+}
+
+@keyframes animateObstacle {
+  0% {
+    right: -125px;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+/***************************ground****************************/
+
+#game #ground {
+  height: 20px;
+  width: 1200px;
+  position: absolute;
+  bottom: 20px;
+}
+#game #ground img {
+  height: 15px;
+  width: 2000px;
+  position: absolute;
+  left: 0;
+  animation: none;
+}
+.groundActive {
+  animation: animateGround 2s linear infinite;
+}
+@keyframes animateGround {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+    left: -1000px;
+  }
+}
+
+/***************************cloud****************************/
+#game #cloud {
+  height: 30px;
+  width: 60px;
+  border-radius: 40px;
+  position: absolute;
+  top: 60px;
+}
+
+#game #cloud img {
+  height: 30px;
+  width: 90px;
+  position: absolute;
+  left: -100px;
+  animation: none;
+}
+/******cloud2**********/
+#game #cloud2 {
+  height: 40px;
+  width: 120px;
+  border-radius: 40px;
+  position: absolute;
+  top: 60px;
+}
+
+#game #cloud2 img {
+  height: 40px;
+  width: 120px;
+  position: absolute;
+  left: -200px;
+  animation: none;
+}
+
+.cloudActive {
+  animation: cloudAnimate 50s linear infinite;
+}
+
+@keyframes cloudAnimate {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 1000px;
+  }
+}
+
+/***************************Score****************************/
+
+#score {
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: medium;
+  color: #535353;
+  font-family: "Press Start 2P", cursive;
+}
+/***************************Game Over****************************/
+#gameOver {
+  display: none;
+  position: absolute;
+  left: calc(50% - 181px);
+  top: calc(50% - 40px);
+}
+
+/***************************Restart****************************/
+#restart {
+  display: none;
+  position: absolute;
+  left: calc(50%);
+  top: calc(50%);
+}
+/***************************instruction****************************/
+#instruction {
+  left: calc(20%);
+  right: calc(20%);
+  top: calc(80%);
+  position: absolute;
+  font-size: small;
+  color: #535353;
+  font-family: "Press Start 2P", cursive;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>trex</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="game">
+        <audio src="./assets/music/jump.mp3" style="display: none;" id="jump"></audio>
+        <audio src="./assets/music/die.mp3" style="display: none;" id="die"></audio>
+        <div id="dino">
+
+        </div>
+
+        <div id="obstacle">
+            <img src='./assets/images/obstacle1.png' alt="obstacle" id="obstacleImg">
+        </div>
+
+        <div id="ground">
+            <img src="./assets/images/ground2.png" alt="ground">
+        </div>
+
+        <div id="cloud">
+            <img src="./assets/images/cloud.png" alt="cloud">
+        </div>
+        <div id="cloud2">
+            <img src="./assets/images/cloud.png" alt="cloud">
+        </div>
+        <div id="score">
+            <b>00000</b>
+        </div>
+        <div id="gameOver">
+            <img src="./assets/images/gameOver.png" alt="gameOver">
+
+        </div>
+
+        <div id="restart">
+            <img src="./assets/images/restart.png" alt="restart" width="40px" height="40px">
+        </div>
+
+    </div>
+    <div id="instruction">Press "Space" to Start/Restart the game. Use "ArrowUp" ↑ to jump. </div>
+
+    <script src="./assets/js/sketch.js"></script>
+</body>
+
+</html>
