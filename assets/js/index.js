@@ -32,6 +32,7 @@ let scoreCounter = () => {
 
 
 window.addEventListener("keydown", (start) => {
+    console.log(start);
     if (start.code == "Space") {
 
         gameOver.style.display = "none";
